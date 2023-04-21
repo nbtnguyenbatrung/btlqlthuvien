@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B52C0366-6744-448B-870C-3FC8EE18001D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>librarian</RootNamespace>
+    <AssemblyName>librarian</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream">
+      <HintPath>..\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.MSXML, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\major assignment\bin\Debug\Microsoft.MSXML.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\major assignment\bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common">
+      <HintPath>..\bin\Debug\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization">
+      <HintPath>..\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design">
+      <HintPath>..\bin\Debug\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <HintPath>..\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>..\bin\Debug\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\major assignment\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="component\CalendarColumn.cs" />
+    <Compile Include="component\CalendarColumn.Designer.cs">
+      <DependentUpon>CalendarColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\DataService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="component\Form_connect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="component\Form_connect.Designer.cs">
+      <DependentUpon>Form_connect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="component\Util.cs" />
+    <Compile Include="control\Ctr_book.cs" />
+    <Compile Include="control\Ctr_borrowBook.cs" />
+    <Compile Include="control\Ctr_BorrowedBook.cs" />
+    <Compile Include="control\Ctr_card.cs" />
+    <Compile Include="control\Ctr_Creator.cs" />
+    <Compile Include="control\Ctr_field.cs" />
+    <Compile Include="control\Ctr_PublishingCompany.cs" />
+    <Compile Include="control\Ctr_type.cs" />
+    <Compile Include="control\Ctr_user.cs" />
+    <Compile Include="data\Data_book.cs" />
+    <Compile Include="data\Data_borrowBook.cs" />
+    <Compile Include="data\Data_BorrowedBook.cs" />
+    <Compile Include="data\Data_card.cs" />
+    <Compile Include="data\Data_Creator.cs" />
+    <Compile Include="data\Data_field.cs" />
+    <Compile Include="data\Data_PublishingCompany.cs" />
+    <Compile Include="data\Data_type.cs" />
+    <Compile Include="data\Data_user.cs" />
+    <Compile Include="Frm_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_main.Designer.cs">
+      <DependentUpon>Frm_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="qlthuvien2DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qlthuvien2DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="report\Frm_bookRemind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\Frm_bookRemind.Designer.cs">
+      <DependentUpon>Frm_bookRemind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\Frm_xuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report\Frm_xuat.Designer.cs">
+      <DependentUpon>Frm_xuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Frm_book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_book.Designer.cs">
+      <DependentUpon>Frm_book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Frm_borrowBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_borrowBook.Designer.cs">
+      <DependentUpon>Frm_borrowBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Frm_card.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_card.Designer.cs">
+      <DependentUpon>Frm_card.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Frm_Creator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_Creator.Designer.cs">
+      <DependentUpon>Frm_Creator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Frm_field.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_field.Designer.cs">
+      <DependentUpon>Frm_field.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Frm_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_list.Designer.cs">
+      <DependentUpon>Frm_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Frm_outDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_outDate.Designer.cs">
+      <DependentUpon>Frm_outDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Frm_PublishingCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_PublishingCompany.Designer.cs">
+      <DependentUpon>Frm_PublishingCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Frm_type.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_type.Designer.cs">
+      <DependentUpon>Frm_type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Frm_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_User.Designer.cs">
+      <DependentUpon>Frm_User.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="component\Form_connect.resx">
+      <DependentUpon>Form_connect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_main.resx">
+      <DependentUpon>Frm_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="report\Frm_bookRemind.resx">
+      <DependentUpon>Frm_bookRemind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\Frm_xuat.resx">
+      <DependentUpon>Frm_xuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\Report1.rdlc" />
+    <EmbeddedResource Include="view\Frm_book.resx">
+      <DependentUpon>Frm_book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_borrowBook.resx">
+      <DependentUpon>Frm_borrowBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_card.resx">
+      <DependentUpon>Frm_card.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_Creator.resx">
+      <DependentUpon>Frm_Creator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_field.resx">
+      <DependentUpon>Frm_field.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_list.resx">
+      <DependentUpon>Frm_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_outDate.resx">
+      <DependentUpon>Frm_outDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_PublishingCompany.resx">
+      <DependentUpon>Frm_PublishingCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_type.resx">
+      <DependentUpon>Frm_type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_User.resx">
+      <DependentUpon>Frm_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="qlthuvien2DataSet.xsc">
+      <DependentUpon>qlthuvien2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="qlthuvien2DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>qlthuvien2DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="qlthuvien2DataSet.xss">
+      <DependentUpon>qlthuvien2DataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="qlthuvien2.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
