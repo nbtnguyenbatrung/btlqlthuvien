@@ -73,7 +73,7 @@ namespace librarian.view
             this.userId = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.bookId = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.deadDate = new librarian.component.CalendarColumn();
-            this.actualDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actualDate = new librarian.component.CalendarColumn();
             this.status = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.statusQuo = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvborrowbook)).BeginInit();
@@ -209,6 +209,7 @@ namespace librarian.view
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -553,6 +554,8 @@ namespace librarian.view
             this.actualDate.HeaderText = "Ngày trả thực tế";
             this.actualDate.MinimumWidth = 8;
             this.actualDate.Name = "actualDate";
+            this.actualDate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.actualDate.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.actualDate.Width = 150;
             // 
             // status
@@ -652,7 +655,7 @@ namespace librarian.view
         private System.Windows.Forms.DataGridViewComboBoxColumn userId;
         private System.Windows.Forms.DataGridViewComboBoxColumn bookId;
         private component.CalendarColumn deadDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn actualDate;
+        private component.CalendarColumn actualDate;
         private System.Windows.Forms.DataGridViewComboBoxColumn status;
         private System.Windows.Forms.DataGridViewComboBoxColumn statusQuo;
     }

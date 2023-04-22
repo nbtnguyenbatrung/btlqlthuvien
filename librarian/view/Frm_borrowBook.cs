@@ -45,7 +45,7 @@ namespace librarian.view
             DataRow m_Row = m_borrowBookctrl.ThemDongMoi();
             m_Row["deadDate"] = DateTime.Today;
             m_Row["actualDate"] = DateTime.Today;
-            m_Row["status"] = "mượn mới";
+            m_Row["status"] = "Mượn";
             m_Row["statusQuo"] = "bình thường";
             m_borrowBookctrl.ThemBorrowBook(m_Row);
             bindingNavigatorborrowbook.BindingSource.MoveLast();
