@@ -65,14 +65,22 @@ namespace librarian.view
 
                 foreach (DataGridViewRow row in dgvcard.SelectedRows)
                 {
-                    conn.Open();
-                    OleDbCommand cmd = new OleDbCommand("delete from tb_card where cardId =" + row.Cells["cardId"].Value, conn);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Xóa dữ liệu thành công", "Thông báo!");
-                    bindingNavigatorcard.BindingSource.RemoveCurrent();
-                    // Trả tài nguyên
-                    cmd.Dispose();
-                    conn.Close();
+                    if (row.Cells["colmadg"].Value.ToString() != "")
+                    {
+                        conn.Open();
+                        OleDbCommand cmd = new OleDbCommand("delete from tb_card where cardId =" + row.Cells["cardId"].Value, conn);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Xóa dữ liệu thành công", "Thông báo!");
+                        bindingNavigatorcard.BindingSource.RemoveCurrent();
+                        // Trả tài nguyên
+                        cmd.Dispose();
+                        conn.Close();
+                    }
+                    else
+                    {
+                        bindingNavigatorcard.BindingSource.RemoveCurrent();
+                    }
+                       
                 }
 
             }

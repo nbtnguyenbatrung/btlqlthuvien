@@ -57,12 +57,6 @@ namespace librarian.view
             this.btnluu = new DevComponents.DotNetBar.ButtonItem();
             this.btnthoat = new DevComponents.DotNetBar.ButtonItem();
             this.dgvuser = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.colmadg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthday = new librarian.component.CalendarColumn();
-            this.jobTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigatoruser = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -75,6 +69,12 @@ namespace librarian.view
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colmadg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birthday = new librarian.component.CalendarColumn();
+            this.jobTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.navigationPanePanel2.SuspendLayout();
             this.navigationPane1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -90,13 +90,13 @@ namespace librarian.view
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorthem
             // 
@@ -104,7 +104,7 @@ namespace librarian.view
             this.bindingNavigatorthem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorthem.Image")));
             this.bindingNavigatorthem.Name = "bindingNavigatorthem";
             this.bindingNavigatorthem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorthem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorthem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorthem.Text = "Add new";
             this.bindingNavigatorthem.Click += new System.EventHandler(this.bindingNavigatorthem_Click);
             // 
@@ -114,7 +114,7 @@ namespace librarian.view
             this.bindingNavigatorxoa.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorxoa.Image")));
             this.bindingNavigatorxoa.Name = "bindingNavigatorxoa";
             this.bindingNavigatorxoa.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorxoa.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorxoa.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorxoa.Text = "Delete";
             this.bindingNavigatorxoa.Click += new System.EventHandler(this.bindingNavigatorxoa_Click);
             // 
@@ -124,7 +124,7 @@ namespace librarian.view
             this.bindingNavigatorsave.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorsave.Image")));
             this.bindingNavigatorsave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bindingNavigatorsave.Name = "bindingNavigatorsave";
-            this.bindingNavigatorsave.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorsave.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorsave.Text = "lưu";
             this.bindingNavigatorsave.Click += new System.EventHandler(this.bindingNavigatorsave_Click);
             // 
@@ -134,7 +134,7 @@ namespace librarian.view
             this.bindingNavigatorexit.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorexit.Image")));
             this.bindingNavigatorexit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bindingNavigatorexit.Name = "bindingNavigatorexit";
-            this.bindingNavigatorexit.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorexit.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorexit.Text = "thoát";
             this.bindingNavigatorexit.Click += new System.EventHandler(this.bindingNavigatorexit_Click);
             // 
@@ -266,13 +266,13 @@ namespace librarian.view
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorcancel
             // 
@@ -280,7 +280,7 @@ namespace librarian.view
             this.bindingNavigatorcancel.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorcancel.Image")));
             this.bindingNavigatorcancel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bindingNavigatorcancel.Name = "bindingNavigatorcancel";
-            this.bindingNavigatorcancel.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorcancel.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorcancel.Text = "làm mới";
             this.bindingNavigatorcancel.Click += new System.EventHandler(this.bindingNavigatorcancel_Click);
             // 
@@ -386,64 +386,13 @@ namespace librarian.view
             this.dgvuser.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvuser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvuser.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvuser.Location = new System.Drawing.Point(3, 60);
+            this.dgvuser.Location = new System.Drawing.Point(3, 55);
             this.dgvuser.Name = "dgvuser";
             this.dgvuser.RowHeadersWidth = 62;
             this.dgvuser.RowTemplate.Height = 28;
             this.dgvuser.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.dgvuser.Size = new System.Drawing.Size(838, 521);
+            this.dgvuser.Size = new System.Drawing.Size(838, 526);
             this.dgvuser.TabIndex = 1;
-            // 
-            // colmadg
-            // 
-            this.colmadg.DataPropertyName = "userId";
-            this.colmadg.HeaderText = "Mã độc giả";
-            this.colmadg.MinimumWidth = 8;
-            this.colmadg.Name = "colmadg";
-            this.colmadg.ReadOnly = true;
-            this.colmadg.Width = 150;
-            // 
-            // nameUser
-            // 
-            this.nameUser.DataPropertyName = "nameUser";
-            this.nameUser.HeaderText = "Tên độc giả";
-            this.nameUser.MinimumWidth = 8;
-            this.nameUser.Name = "nameUser";
-            this.nameUser.Width = 150;
-            // 
-            // birthday
-            // 
-            this.birthday.DataPropertyName = "birthday";
-            this.birthday.HeaderText = "Ngày sinh";
-            this.birthday.MinimumWidth = 8;
-            this.birthday.Name = "birthday";
-            this.birthday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.birthday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.birthday.Width = 150;
-            // 
-            // jobTitle
-            // 
-            this.jobTitle.DataPropertyName = "jobTitle";
-            this.jobTitle.HeaderText = "Chức danh";
-            this.jobTitle.MinimumWidth = 8;
-            this.jobTitle.Name = "jobTitle";
-            this.jobTitle.Width = 150;
-            // 
-            // address
-            // 
-            this.address.DataPropertyName = "address";
-            this.address.HeaderText = "Địa chỉ";
-            this.address.MinimumWidth = 8;
-            this.address.Name = "address";
-            this.address.Width = 150;
-            // 
-            // cmt
-            // 
-            this.cmt.DataPropertyName = "cmt";
-            this.cmt.HeaderText = "Số chứng minh thư";
-            this.cmt.MinimumWidth = 8;
-            this.cmt.Name = "cmt";
-            this.cmt.Width = 150;
             // 
             // bindingNavigatoruser
             // 
@@ -473,14 +422,14 @@ namespace librarian.view
             this.bindingNavigatoruser.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigatoruser.Name = "bindingNavigatoruser";
             this.bindingNavigatoruser.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigatoruser.Size = new System.Drawing.Size(838, 38);
+            this.bindingNavigatoruser.Size = new System.Drawing.Size(838, 33);
             this.bindingNavigatoruser.TabIndex = 0;
             this.bindingNavigatoruser.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 33);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -490,7 +439,7 @@ namespace librarian.view
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -499,13 +448,13 @@ namespace librarian.view
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -562,6 +511,57 @@ namespace librarian.view
             this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Width = 150;
+            // 
+            // colmadg
+            // 
+            this.colmadg.DataPropertyName = "userId";
+            this.colmadg.HeaderText = "Mã độc giả";
+            this.colmadg.MinimumWidth = 8;
+            this.colmadg.Name = "colmadg";
+            this.colmadg.ReadOnly = true;
+            this.colmadg.Width = 150;
+            // 
+            // nameUser
+            // 
+            this.nameUser.DataPropertyName = "nameUser";
+            this.nameUser.HeaderText = "Tên độc giả *";
+            this.nameUser.MinimumWidth = 8;
+            this.nameUser.Name = "nameUser";
+            this.nameUser.Width = 150;
+            // 
+            // birthday
+            // 
+            this.birthday.DataPropertyName = "birthday";
+            this.birthday.HeaderText = "Ngày sinh";
+            this.birthday.MinimumWidth = 8;
+            this.birthday.Name = "birthday";
+            this.birthday.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.birthday.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.birthday.Width = 150;
+            // 
+            // jobTitle
+            // 
+            this.jobTitle.DataPropertyName = "jobTitle";
+            this.jobTitle.HeaderText = "Chức danh";
+            this.jobTitle.MinimumWidth = 8;
+            this.jobTitle.Name = "jobTitle";
+            this.jobTitle.Width = 150;
+            // 
+            // address
+            // 
+            this.address.DataPropertyName = "address";
+            this.address.HeaderText = "Địa chỉ";
+            this.address.MinimumWidth = 8;
+            this.address.Name = "address";
+            this.address.Width = 150;
+            // 
+            // cmt
+            // 
+            this.cmt.DataPropertyName = "cmt";
+            this.cmt.HeaderText = "Số chứng minh thư";
+            this.cmt.MinimumWidth = 8;
+            this.cmt.Name = "cmt";
+            this.cmt.Width = 150;
             // 
             // Frm_User
             // 

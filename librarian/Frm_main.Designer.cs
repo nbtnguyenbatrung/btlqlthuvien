@@ -50,6 +50,8 @@ namespace librarian
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
             this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBar3 = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar2 = new DevComponents.DotNetBar.RibbonBar();
             this.btnbonus = new DevComponents.DotNetBar.ButtonItem();
             this.bntdiscipline = new DevComponents.DotNetBar.ButtonItem();
@@ -65,8 +67,6 @@ namespace librarian
             this.btnlophoc = new DevComponents.DotNetBar.ButtonItem();
             this.btngiaovien = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonTabItem1 = new DevComponents.DotNetBar.RibbonTabItem();
-            this.ribbonBar3 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ctxmenumain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomBar)).BeginInit();
             this.bottomBar.SuspendLayout();
@@ -291,6 +291,29 @@ namespace librarian
             this.ribbonPanel1.Size = new System.Drawing.Size(1131, 193);
             this.ribbonPanel1.TabIndex = 1;
             // 
+            // ribbonBar3
+            // 
+            this.ribbonBar3.AutoOverflowEnabled = true;
+            this.ribbonBar3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar3.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem1});
+            this.ribbonBar3.Location = new System.Drawing.Point(652, 0);
+            this.ribbonBar3.Name = "ribbonBar3";
+            this.ribbonBar3.Size = new System.Drawing.Size(97, 190);
+            this.ribbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.ribbonBar3.TabIndex = 5;
+            this.ribbonBar3.Text = "Thống kê";
+            // 
+            // buttonItem1
+            // 
+            this.buttonItem1.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem1.Image")));
+            this.buttonItem1.ImagePaddingHorizontal = 8;
+            this.buttonItem1.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem1.Name = "buttonItem1";
+            this.buttonItem1.SubItemsExpandWidth = 14;
+            this.buttonItem1.Text = "<div align=\"center\">Danh sách  <br/> quá hạn mượn</div>";
+            this.buttonItem1.Click += new System.EventHandler(this.buttonItem1_Click);
+            // 
             // ribbonBar2
             // 
             this.ribbonBar2.AutoOverflowEnabled = true;
@@ -452,35 +475,11 @@ namespace librarian
             this.ribbonTabItem1.Panel = this.ribbonPanel1;
             this.ribbonTabItem1.Text = "&Quản lý";
             // 
-            // ribbonBar3
-            // 
-            this.ribbonBar3.AutoOverflowEnabled = true;
-            this.ribbonBar3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar3.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem1});
-            this.ribbonBar3.Location = new System.Drawing.Point(652, 0);
-            this.ribbonBar3.Name = "ribbonBar3";
-            this.ribbonBar3.Size = new System.Drawing.Size(97, 190);
-            this.ribbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.ribbonBar3.TabIndex = 5;
-            this.ribbonBar3.Text = "Thống kê";
-            // 
-            // buttonItem1
-            // 
-            this.buttonItem1.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem1.Image")));
-            this.buttonItem1.ImagePaddingHorizontal = 8;
-            this.buttonItem1.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem1.Name = "buttonItem1";
-            this.buttonItem1.SubItemsExpandWidth = 14;
-            this.buttonItem1.Text = "<div align=\"center\">Danh sách  <br/> quá hạn mượn</div>";
-            this.buttonItem1.Click += new System.EventHandler(this.buttonItem1_Click);
-            // 
             // Frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1139, 488);
             this.Controls.Add(this.tabStrip1);

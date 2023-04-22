@@ -64,14 +64,21 @@ namespace librarian.view
 
                 foreach (DataGridViewRow row in dgvborrowbook.SelectedRows)
                 {
-                    
-                    OleDbCommand cmd = new OleDbCommand("delete from tb_borrowBook where borrowBookId =" + row.Cells["colmadg"].Value, conn);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Xóa dữ liệu thành công", "Thông báo!");
-                    bindingNavigatorborrowbook.BindingSource.RemoveCurrent();
-                    // Trả tài nguyên
-                    cmd.Dispose();
-                    conn.Close();
+                    if (row.Cells["colmadg"].Value.ToString() != "")
+                    {
+                        OleDbCommand cmd = new OleDbCommand("delete from tb_borrowBook where borrowBookId =" + row.Cells["colmadg"].Value, conn);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Xóa dữ liệu thành công", "Thông báo!");
+                        bindingNavigatorborrowbook.BindingSource.RemoveCurrent();
+                        // Trả tài nguyên
+                        cmd.Dispose();
+                        conn.Close();
+                    }
+                    else
+                    {
+                        bindingNavigatorborrowbook.BindingSource.RemoveCurrent();
+                    }
+                     
                 }
 
             }

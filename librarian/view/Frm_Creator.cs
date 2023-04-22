@@ -57,27 +57,35 @@ namespace librarian.view
 
                 foreach (DataGridViewRow row in dgvuser.SelectedRows)
                 {
-                    conn.Open();
-                    string select1 = "Select bookId from tb_book where creatorId=" + row.Cells["creatorId"].Value;
-                    OleDbCommand cmd1 = new OleDbCommand(select1, conn);
-                    OleDbDataReader reader1 = cmd1.ExecuteReader();
-
-                    if (reader1.Read())
+                    if (row.Cells["colmadg"].Value.ToString() != "")
                     {
-                        MessageBox.Show("Độc giả đang được sử dụng không thể xóa ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        reader1.Dispose();
-                        cmd1.Dispose();
-                        conn.Close();
-                        break;
-                    }
+                        conn.Open();
+                        string select1 = "Select bookId from tb_book where creatorId=" + row.Cells["creatorId"].Value;
+                        OleDbCommand cmd1 = new OleDbCommand(select1, conn);
+                        OleDbDataReader reader1 = cmd1.ExecuteReader();
 
-                    OleDbCommand cmd = new OleDbCommand("delete from tb_creator where creatorId =" + row.Cells["creatorId"].Value, conn);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Xóa dữ liệu thành công", "Thông báo!");
-                    bindingNavigatoruser.BindingSource.RemoveCurrent();
-                    // Trả tài nguyên
-                    cmd.Dispose();
-                    conn.Close();
+                        if (reader1.Read())
+                        {
+                            MessageBox.Show("Độc giả đang được sử dụng không thể xóa ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            reader1.Dispose();
+                            cmd1.Dispose();
+                            conn.Close();
+                            break;
+                        }
+
+                        OleDbCommand cmd = new OleDbCommand("delete from tb_creator where creatorId =" + row.Cells["creatorId"].Value, conn);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Xóa dữ liệu thành công", "Thông báo!");
+                        bindingNavigatoruser.BindingSource.RemoveCurrent();
+                        // Trả tài nguyên
+                        cmd.Dispose();
+                        conn.Close();
+                    }
+                    else
+                    {
+                        bindingNavigatoruser.BindingSource.RemoveCurrent();
+                    }
+                        
                 }
 
             }

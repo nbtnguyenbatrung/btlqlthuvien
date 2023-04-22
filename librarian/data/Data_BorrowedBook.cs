@@ -27,7 +27,7 @@ namespace librarian.data
         public DataTable LayDsUser()
         {
             OleDbCommand cmd = new OleDbCommand("SELECT tb_user.userId AS userIdView , tb_user.nameUser AS nameUserView, Count(tb_borrowBook.borrowBookId) AS Soluong " +
-                                "FROM(SELECT * FROM tb_borrowBook WHERE tb_borrowBook.status = 'mượn mới') AS B " +
+                                "FROM(SELECT * FROM tb_borrowBook WHERE tb_borrowBook.status = 'Mượn') AS B " +
                                 "RIGHT JOIN tb_user ON B.userId = tb_user.userId " +
                                 "GROUP BY tb_user.userId, tb_user.nameUser " +
                                 "ORDER BY Count(tb_borrowBook.borrowBookId) DESC; ");

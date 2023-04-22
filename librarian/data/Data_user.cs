@@ -61,7 +61,7 @@ namespace librarian.data
                         "FROM((tb_borrowBook AS B INNER JOIN tb_card AS C ON B.userId = C.userId) " +
                         "INNER JOIN tb_user AS U ON B.userId = U.userId) " +
                         "INNER JOIN tb_book AS BO ON B.bookId = BO.bookId " +
-                        "WHERE(((DateDiff('d', [deadDate], Now()) - 1) > 0)) ";
+                        "WHERE(((DateDiff('d', [deadDate], Now()) - 1) > 0)) AND status = 'Mượn' ";
 
             if (check && ten != "") {
                 sql += "WHERE U.nameUser LIKE '%" + ten + "%'";
