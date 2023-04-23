@@ -176,7 +176,7 @@ namespace librarian.view
 
         private void loadData()
         {
-            m_userctrl.HienThiDataGridViewComboBoxColumnCard(userId);
+            m_userctrl.HienThiDataGridViewComboBoxColumn(userId);
             m_bookctrl.HienThiDataGridViewComboBoxColumn(bookId);
             m_borrowBookctrl.HienThi(dgvborrowbook, bindingNavigatorborrowbook);
         }        

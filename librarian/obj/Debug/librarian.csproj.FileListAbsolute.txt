@@ -52,3 +52,4 @@ D:\librarian\librarian\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
 D:\librarian\librarian\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
 D:\librarian\librarian\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
 D:\librarian\librarian\obj\Debug\librarian.exe.config
+D:\librarian\librarian\obj\Debug\librarian.csproj.AssemblyReference.cache

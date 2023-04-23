@@ -28,6 +28,8 @@ namespace librarian.report
 
         private void Frm_xuat_Load(object sender, EventArgs e)
         {
+            String path = Environment.CurrentDirectory;
+            string path2 = path.Replace(@"bin\Debug", "");
             conn.Open();
             OleDbCommand cmd = new OleDbCommand("SELECT BO.nameBook, 0.1*Bo.price*(DateDiff('d',deadDate,Now())) AS amount " +
                 "FROM((tb_borrowBook AS B INNER JOIN tb_card AS C ON B.userId = C.userId) " +
@@ -39,7 +41,7 @@ namespace librarian.report
             DataTable dt = new DataTable();
             da.Fill(dt);
             ReportDataSource rds = new ReportDataSource("ViewXuat", dt);
-            reportViewer1.LocalReport.ReportPath = @"D:\librarian\librarian\report\Report1.rdlc";
+            reportViewer1.LocalReport.ReportPath = path2 + @"report\Report1.rdlc";
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(rds);
             IList<ReportParameter> param = new List<ReportParameter>();
