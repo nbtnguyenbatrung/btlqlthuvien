@@ -38,12 +38,12 @@ namespace librarian.data
 
         public DataTable LayDsOutDate()
         {
-            OleDbCommand cmd = new OleDbCommand("SELECT DateDiff('d' , deadDate, Now())-1 AS diff, U.userId, U.nameUser, BO.bookId, BO.nameBook, 0.1*Bo.price*(DateDiff('d' , deadDate, Now())-1) AS amount " +
+            OleDbCommand cmd = new OleDbCommand("SELECT DateDiff('d' , deadDate, Now()) AS diff, U.userId, U.nameUser, BO.bookId, BO.nameBook, 0.1*Bo.price*(DateDiff('d' , deadDate, Now())) AS amount " +
                     "FROM((tb_borrowBook AS B INNER JOIN tb_card AS C ON B.userId = C.userId) " +
                     "INNER JOIN tb_user AS U ON B.userId = U.userId) " +
                     "INNER JOIN tb_book AS BO ON B.bookId = BO.bookId " +
-                    "WHERE(DateDiff('d', deadDate, Now()) - 1) > 0 " +
-                    "ORDER BY DateDiff('d', deadDate, Now()) - 1 DESC; ");
+                    "WHERE(DateDiff('d', deadDate, Now())) > 0 " +
+                    "ORDER BY DateDiff('d', deadDate, Now()) DESC; ");
             m_Data.Load(cmd);
             return m_Data;
         }
@@ -54,11 +54,11 @@ namespace librarian.data
                                        string namrbook)
         {
 
-            String sql = "SELECT DateDiff('d' , deadDate, Now())-1 AS diff, U.userId, U.nameUser, BO.bookId, BO.nameBook, 0.1*Bo.price*(DateDiff('d' , deadDate, Now())-1) AS amount " +
+            String sql = "SELECT DateDiff('d' , deadDate, Now()) AS diff, U.userId, U.nameUser, BO.bookId, BO.nameBook, 0.1*Bo.price*(DateDiff('d' , deadDate, Now())) AS amount " +
                     "FROM((tb_borrowBook AS B INNER JOIN tb_card AS C ON B.userId = C.userId) " +
                     "INNER JOIN tb_user AS U ON B.userId = U.userId) " +
                     "INNER JOIN tb_book AS BO ON B.bookId = BO.bookId " +
-                    "WHERE(DateDiff('d', deadDate, Now()) - 1) > 0 ";
+                    "WHERE(DateDiff('d', deadDate, Now())) > 0 ";
 
             if (checknameuser)
             {

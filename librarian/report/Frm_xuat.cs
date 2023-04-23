@@ -29,12 +29,12 @@ namespace librarian.report
         private void Frm_xuat_Load(object sender, EventArgs e)
         {
             conn.Open();
-            OleDbCommand cmd = new OleDbCommand("SELECT BO.nameBook, 0.1*Bo.price*(DateDiff('d',deadDate,Now())-1) AS amount " +
+            OleDbCommand cmd = new OleDbCommand("SELECT BO.nameBook, 0.1*Bo.price*(DateDiff('d',deadDate,Now())) AS amount " +
                 "FROM((tb_borrowBook AS B INNER JOIN tb_card AS C ON B.userId = C.userId) " +
                 "INNER JOIN tb_user AS U ON B.userId = U.userId) " +
                 "INNER JOIN tb_book AS BO ON B.bookId = BO.bookId " +
-                "WHERE(((DateDiff('d',[deadDate], Now()) - 1) > 0)) AND U.userId = " + Int64.Parse(m_userId) +
-                " ORDER BY DateDiff('d',[deadDate], Now()) - 1 DESC; ", conn);
+                "WHERE(((DateDiff('d',[deadDate], Now()) ) > 0)) AND U.userId = " + Int64.Parse(m_userId) +
+                " ORDER BY DateDiff('d',[deadDate], Now()) DESC; ", conn);
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
