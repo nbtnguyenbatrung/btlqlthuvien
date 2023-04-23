@@ -31,7 +31,7 @@ namespace librarian.view
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_outDate));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btntk = new DevComponents.DotNetBar.ButtonX();
             this.bindingNavigatoroutdate = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -54,11 +54,11 @@ namespace librarian.view
             this.btnsave = new DevComponents.DotNetBar.ButtonItem();
             this.btnthoat = new DevComponents.DotNetBar.ButtonItem();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.txtnameuser = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.cbxtenuser = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.txtnamebook = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.cbxtenbook = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.txtnameuser = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.cbxtenuser = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -223,14 +223,14 @@ namespace librarian.view
             this.diff,
             this.amount});
             this.contextMenuBar1.SetContextMenuEx(this.dgvoutdate, this.ctxmenu);
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvoutdate.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvoutdate.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvoutdate.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvoutdate.Location = new System.Drawing.Point(0, 197);
             this.dgvoutdate.Name = "dgvoutdate";
@@ -344,9 +344,25 @@ namespace librarian.view
             this.groupPanel1.TabIndex = 8;
             this.groupPanel1.Text = "Danh sách sách được mượn quá han";
             // 
-            // openFileDialog1
+            // txtnamebook
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // 
+            // 
+            this.txtnamebook.Border.Class = "TextBoxBorder";
+            this.txtnamebook.Location = new System.Drawing.Point(471, 73);
+            this.txtnamebook.Name = "txtnamebook";
+            this.txtnamebook.Size = new System.Drawing.Size(196, 26);
+            this.txtnamebook.TabIndex = 19;
+            this.txtnamebook.WatermarkText = "Nhập thông tin tim kiếm ";
+            // 
+            // cbxtenbook
+            // 
+            this.cbxtenbook.Location = new System.Drawing.Point(333, 73);
+            this.cbxtenbook.Name = "cbxtenbook";
+            this.cbxtenbook.Size = new System.Drawing.Size(112, 26);
+            this.cbxtenbook.TabIndex = 18;
+            this.cbxtenbook.Text = "Tên sách :";
             // 
             // txtnameuser
             // 
@@ -372,25 +388,9 @@ namespace librarian.view
             this.cbxtenuser.TabIndex = 15;
             this.cbxtenuser.Text = "Tên độc giả :";
             // 
-            // txtnamebook
+            // openFileDialog1
             // 
-            // 
-            // 
-            // 
-            this.txtnamebook.Border.Class = "TextBoxBorder";
-            this.txtnamebook.Location = new System.Drawing.Point(471, 73);
-            this.txtnamebook.Name = "txtnamebook";
-            this.txtnamebook.Size = new System.Drawing.Size(196, 26);
-            this.txtnamebook.TabIndex = 19;
-            this.txtnamebook.WatermarkText = "Nhập thông tin tim kiếm ";
-            // 
-            // cbxtenbook
-            // 
-            this.cbxtenbook.Location = new System.Drawing.Point(333, 73);
-            this.cbxtenbook.Name = "cbxtenbook";
-            this.cbxtenbook.Size = new System.Drawing.Size(112, 26);
-            this.cbxtenbook.TabIndex = 18;
-            this.cbxtenbook.Text = "Tên sách :";
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -491,6 +491,7 @@ namespace librarian.view
             // 
             // amount
             // 
+            this.amount.DataPropertyName = "amount";
             this.amount.HeaderText = "Số tiền phạt";
             this.amount.MinimumWidth = 8;
             this.amount.Name = "amount";
@@ -557,15 +558,15 @@ namespace librarian.view
         private DevComponents.DotNetBar.ButtonItem btnthoat;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtnameuser;
+        private DevComponents.DotNetBar.Controls.CheckBoxX cbxtenuser;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtnamebook;
+        private DevComponents.DotNetBar.Controls.CheckBoxX cbxtenbook;
         private System.Windows.Forms.DataGridViewTextBoxColumn userId;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameUser;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookId;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameBook;
         private System.Windows.Forms.DataGridViewTextBoxColumn diff;
         private System.Windows.Forms.DataGridViewTextBoxColumn amount;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtnameuser;
-        private DevComponents.DotNetBar.Controls.CheckBoxX cbxtenuser;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtnamebook;
-        private DevComponents.DotNetBar.Controls.CheckBoxX cbxtenbook;
     }
 }

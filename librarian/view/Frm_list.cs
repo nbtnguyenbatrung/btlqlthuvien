@@ -27,5 +27,15 @@ namespace librarian.view
             m_dataCtrl.HienThiDsBB(lvchuaphan);
             m_dataCtrl.HienThiDsSV(lvphan);
         }
+
+        private void btnRefreshbook_Click(object sender, EventArgs e)
+        {
+            m_dataCtrl.HienThiDsBB(lvchuaphan);
+        }
+
+        private void btnRefreshuser_Click(object sender, EventArgs e)
+        {
+            m_dataCtrl.HienThiDsSV(lvphan);
+        }
     }
 }

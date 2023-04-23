@@ -21,6 +21,14 @@ namespace librarian.data
             return m_UserData;
         }
 
+        public DataTable LayDsUserCard()
+        {
+            OleDbCommand cmd = new OleDbCommand("SELECT tb_user.* FROM tb_user INNER JOIN " +
+                "( SELECT * FROM tb_card WHERE toDate > now() ) AS C ON C.userId = tb_user.userId");
+            m_UserData.Load(cmd);
+            return m_UserData;
+        }
+
         public DataRow ThemDongMoi()
         {
             return m_UserData.NewRow();
@@ -61,7 +69,7 @@ namespace librarian.data
                         "FROM((tb_borrowBook AS B INNER JOIN tb_card AS C ON B.userId = C.userId) " +
                         "INNER JOIN tb_user AS U ON B.userId = U.userId) " +
                         "INNER JOIN tb_book AS BO ON B.bookId = BO.bookId " +
-                        "WHERE(((DateDiff('d', [deadDate], Now()) - 1) > 0)) AND status = 'Mượn' ";
+                        "WHERE(((DateDiff('d', [deadDate], Now()) - 1) > 0)) AND B.status = 'Mượn' ";
 
             if (check && ten != "") {
                 sql += "WHERE U.nameUser LIKE '%" + ten + "%'";

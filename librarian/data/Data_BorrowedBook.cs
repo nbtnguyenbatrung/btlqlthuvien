@@ -18,6 +18,7 @@ namespace librarian.data
         {
             OleDbCommand cmd = new OleDbCommand("SELECT tb_book.bookId AS bookIdView , tb_book.nameBook AS nameBookView, COUNT( tb_borrowBook.borrowBookId) as Soluong " +
                                                 "FROM tb_book LEFT JOIN tb_borrowBook ON tb_book.bookId = tb_borrowBook.bookId " +
+                                                "WHERE tb_borrowBook.status = 'Mượn' " +
                                                 "group by tb_book.bookId, tb_book.nameBook " +
                                                 "ORDER BY COUNT( tb_borrowBook.borrowBookId) desc");
             m_Data.Load(cmd);
@@ -27,7 +28,7 @@ namespace librarian.data
         public DataTable LayDsUser()
         {
             OleDbCommand cmd = new OleDbCommand("SELECT tb_user.userId AS userIdView , tb_user.nameUser AS nameUserView, Count(tb_borrowBook.borrowBookId) AS Soluong " +
-                                "FROM(SELECT * FROM tb_borrowBook WHERE tb_borrowBook.status = 'Mượn') AS B " +
+                                "FROM(SELECT * FROM tb_borrowBook) AS B " +
                                 "RIGHT JOIN tb_user ON B.userId = tb_user.userId " +
                                 "GROUP BY tb_user.userId, tb_user.nameUser " +
                                 "ORDER BY Count(tb_borrowBook.borrowBookId) DESC; ");
@@ -71,6 +72,30 @@ namespace librarian.data
             sql += "ORDER BY DateDiff('d', deadDate, Now()) - 1 DESC; ";
 
             OleDbCommand cmd = new OleDbCommand(sql);
+            m_Data.Load(cmd);
+            return m_Data;
+        }
+
+        public DataTable LayDsTra(string id)
+        {
+            OleDbCommand cmd = new OleDbCommand("SELECT Count(tb_borrowBook.borrowBookId) AS Soluong " +
+                                "FROM(SELECT * FROM tb_borrowBook WHERE tb_borrowBook.status = 'Trả') AS B " +
+                                "RIGHT JOIN tb_user ON B.userId = tb_user.userId " +
+                                "WHERE tb_user.userId = " + Int64.Parse(id) + " " +
+                                "GROUP BY tb_user.userId, tb_user.nameUser " +
+                                "ORDER BY Count(tb_borrowBook.borrowBookId) DESC; ");
+            m_Data.Load(cmd);
+            return m_Data;
+        }
+
+        public DataTable LayDsQuahan(string id)
+        {
+            OleDbCommand cmd = new OleDbCommand("SELECT Count(tb_borrowBook.borrowBookId) AS Soluong " +
+                                "FROM(SELECT * FROM tb_borrowBook WHERE tb_borrowBook.status = 'Mượn' AND tb_borrowBook.deadDate < now()) AS B " +
+                                "RIGHT JOIN tb_user ON B.userId = tb_user.userId " +
+                                "WHERE tb_user.userId = " + Int64.Parse(id) + " " +
+                                "GROUP BY tb_user.userId, tb_user.nameUser " +
+                                "ORDER BY Count(tb_borrowBook.borrowBookId) DESC; ");
             m_Data.Load(cmd);
             return m_Data;
         }

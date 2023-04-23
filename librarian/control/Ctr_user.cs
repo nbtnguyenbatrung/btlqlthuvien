@@ -32,6 +32,14 @@ namespace librarian.control
             cmbColumn.DataPropertyName = "userId";
             cmbColumn.HeaderText = "Tên độc giả * ";
         }
+        public void HienThiDataGridViewComboBoxColumnCard(DataGridViewComboBoxColumn cmbColumn)
+        {
+            cmbColumn.DataSource = m_UserData.LayDsUserCard();
+            cmbColumn.DisplayMember = "nameUser";
+            cmbColumn.ValueMember = "userId";
+            cmbColumn.DataPropertyName = "userId";
+            cmbColumn.HeaderText = "Tên độc giả * ";
+        }
         #endregion
 
         #region Do du lieu vao DataGridView

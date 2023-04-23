@@ -103,11 +103,33 @@ namespace librarian.view
             return true;
         }
 
+        public Boolean KiemTraTruocKhiLuudate(String cellString1, String cellString2)
+        {
+
+            foreach (DataGridViewRow row in dgvborrowbook.Rows)
+            {
+                DateTime date1 = Convert.ToDateTime(row.Cells[cellString1].Value.ToString());
+                DateTime date2 = Convert.ToDateTime(row.Cells[cellString2].Value.ToString());
+
+
+                if (DateTime.Compare(date1, date2) > 0)
+                {
+                    MessageBoxEx.Show("ngày trả sách thực tế phải lớn hơn ngày trả sách ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+            }
+
+            return true;
+        }
+
         #endregion 
         #region lưu 
         private void bindingNavigatorsave_Click(object sender, EventArgs e)
         {
-            if (KiemTraTruocKhiLuu("userId") == true && KiemTraTruocKhiLuu("bookId") == true)
+
+            if (KiemTraTruocKhiLuu("userId") == true && KiemTraTruocKhiLuu("bookId") == true &&
+                KiemTraTruocKhiLuudate("deadDate" , "actualDate") == true )
             {
 
                 bindingNavigatorPositionItem.Focus();
@@ -154,7 +176,7 @@ namespace librarian.view
 
         private void loadData()
         {
-            m_userctrl.HienThiDataGridViewComboBoxColumn(userId);
+            m_userctrl.HienThiDataGridViewComboBoxColumnCard(userId);
             m_bookctrl.HienThiDataGridViewComboBoxColumn(bookId);
             m_borrowBookctrl.HienThi(dgvborrowbook, bindingNavigatorborrowbook);
         }        
