@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using librarian.view;
 
 namespace librarian
 {
@@ -16,7 +17,7 @@ namespace librarian
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_main());
+            Application.Run(new  main());
         }
     }
 }

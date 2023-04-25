@@ -163,6 +163,12 @@
     <Compile Include="view\Frm_Creator.Designer.cs">
       <DependentUpon>Frm_Creator.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\Frm_docgia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_docgia.Designer.cs">
+      <DependentUpon>Frm_docgia.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\Frm_field.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,12 @@
     <Compile Include="view\Frm_PublishingCompany.Designer.cs">
       <DependentUpon>Frm_PublishingCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\Frm_sach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_sach.Designer.cs">
+      <DependentUpon>Frm_sach.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\Frm_type.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +210,12 @@
     </Compile>
     <Compile Include="view\Frm_User.Designer.cs">
       <DependentUpon>Frm_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="component\Form_connect.resx">
       <DependentUpon>Form_connect.cs</DependentUpon>
@@ -233,6 +251,9 @@
     <EmbeddedResource Include="view\Frm_Creator.resx">
       <DependentUpon>Frm_Creator.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_docgia.resx">
+      <DependentUpon>Frm_docgia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\Frm_field.resx">
       <DependentUpon>Frm_field.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,11 +266,17 @@
     <EmbeddedResource Include="view\Frm_PublishingCompany.resx">
       <DependentUpon>Frm_PublishingCompany.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_sach.resx">
+      <DependentUpon>Frm_sach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\Frm_type.resx">
       <DependentUpon>Frm_type.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Frm_User.resx">
       <DependentUpon>Frm_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\main.resx">
+      <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

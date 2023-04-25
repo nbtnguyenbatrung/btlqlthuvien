@@ -53,3 +53,6 @@ D:\librarian\librarian\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.
 D:\librarian\librarian\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
 D:\librarian\librarian\obj\Debug\librarian.exe.config
 D:\librarian\librarian\obj\Debug\librarian.csproj.AssemblyReference.cache
+D:\librarian\librarian\obj\Debug\librarian.view.main.resources
+D:\librarian\librarian\obj\Debug\librarian.view.Frm_docgia.resources
+D:\librarian\librarian\obj\Debug\librarian.view.Frm_sach.resources

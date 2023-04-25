@@ -51,6 +51,32 @@ namespace librarian.component
                 MessageBoxEx.Show("Lỗi kết nối đến cơ sở dữ liệu! Xin vui lòng thiết lập lại kết nối...", "ERROR", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
             }
         }
+
+        public static string ConnectionStringNew()
+        {
+            XmlDocument xmlDoc = XML.XMLReader("connectxml.xml");
+            XmlElement xmlEle = xmlDoc.DocumentElement;
+
+            try
+            {
+                if (xmlEle.SelectSingleNode("costatus").InnerText == "true")
+                {
+                    return "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + xmlEle.SelectSingleNode("servname").InnerText;
+                }
+                else
+                {
+                    return "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + xmlEle.SelectSingleNode("servname").InnerText + ";Initial Catalog=" + xmlEle.SelectSingleNode("database").InnerText + ";User Id=" + xmlEle.SelectSingleNode("username").InnerText + ";Password=" + xmlEle.SelectSingleNode("password").InnerText + ";";
+                }
+
+                uti.DatabaseName = xmlEle.SelectSingleNode("database").InnerText;
+                return "";
+            }
+            catch
+            {
+                MessageBoxEx.Show("Lỗi kết nối đến cơ sở dữ liệu! Xin vui lòng thiết lập lại kết nối...", "ERROR", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+            }
+            return "";
+        }
         #endregion
 
         #region Load
