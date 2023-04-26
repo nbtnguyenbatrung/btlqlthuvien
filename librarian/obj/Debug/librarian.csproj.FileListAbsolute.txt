@@ -56,3 +56,11 @@ D:\librarian\librarian\obj\Debug\librarian.csproj.AssemblyReference.cache
 D:\librarian\librarian\obj\Debug\librarian.view.main.resources
 D:\librarian\librarian\obj\Debug\librarian.view.Frm_docgia.resources
 D:\librarian\librarian\obj\Debug\librarian.view.Frm_sach.resources
+D:\librarian\librarian\obj\Debug\librarian.view.Frm_listdocgia.resources
+D:\librarian\librarian\obj\Debug\librarian.view.Frm_themdocgia.resources
+D:\librarian\librarian\obj\Debug\librarian.view.Frm_suadocgia.resources
+D:\librarian\librarian\obj\Debug\librarian.view.Frm_xoadocgia.resources
+D:\librarian\librarian\obj\Debug\librarian.view.Frm_listsach.resources
+D:\librarian\librarian\obj\Debug\librarian.view.Frm_suasachcs.resources
+D:\librarian\librarian\obj\Debug\librarian.view.Frm_themsach.resources
+D:\librarian\librarian\obj\Debug\librarian.view.Frm_xoasach.resources

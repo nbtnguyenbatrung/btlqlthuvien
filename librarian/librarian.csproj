@@ -181,6 +181,18 @@
     <Compile Include="view\Frm_list.Designer.cs">
       <DependentUpon>Frm_list.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\Frm_listdocgia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_listdocgia.Designer.cs">
+      <DependentUpon>Frm_listdocgia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Frm_listsach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_listsach.Designer.cs">
+      <DependentUpon>Frm_listsach.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\Frm_outDate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +211,30 @@
     <Compile Include="view\Frm_sach.Designer.cs">
       <DependentUpon>Frm_sach.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\Frm_suadocgia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_suadocgia.Designer.cs">
+      <DependentUpon>Frm_suadocgia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Frm_suasachcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_suasachcs.Designer.cs">
+      <DependentUpon>Frm_suasachcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Frm_themdocgia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_themdocgia.Designer.cs">
+      <DependentUpon>Frm_themdocgia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Frm_themsach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_themsach.Designer.cs">
+      <DependentUpon>Frm_themsach.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\Frm_type.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +246,18 @@
     </Compile>
     <Compile Include="view\Frm_User.Designer.cs">
       <DependentUpon>Frm_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Frm_xoadocgia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_xoadocgia.Designer.cs">
+      <DependentUpon>Frm_xoadocgia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Frm_xoasach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Frm_xoasach.Designer.cs">
+      <DependentUpon>Frm_xoasach.cs</DependentUpon>
     </Compile>
     <Compile Include="view\main.cs">
       <SubType>Form</SubType>
@@ -260,6 +308,12 @@
     <EmbeddedResource Include="view\Frm_list.resx">
       <DependentUpon>Frm_list.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_listdocgia.resx">
+      <DependentUpon>Frm_listdocgia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_listsach.resx">
+      <DependentUpon>Frm_listsach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\Frm_outDate.resx">
       <DependentUpon>Frm_outDate.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,11 +323,29 @@
     <EmbeddedResource Include="view\Frm_sach.resx">
       <DependentUpon>Frm_sach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_suadocgia.resx">
+      <DependentUpon>Frm_suadocgia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_suasachcs.resx">
+      <DependentUpon>Frm_suasachcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_themdocgia.resx">
+      <DependentUpon>Frm_themdocgia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_themsach.resx">
+      <DependentUpon>Frm_themsach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\Frm_type.resx">
       <DependentUpon>Frm_type.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Frm_User.resx">
       <DependentUpon>Frm_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_xoadocgia.resx">
+      <DependentUpon>Frm_xoadocgia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Frm_xoasach.resx">
+      <DependentUpon>Frm_xoasach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\main.resx">
       <DependentUpon>main.cs</DependentUpon>

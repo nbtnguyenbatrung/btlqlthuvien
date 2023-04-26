@@ -24,38 +24,6 @@ namespace librarian.view
             InitializeComponent();
         }
 
-        private void độcGiảToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Frm_docgia f = new Frm_docgia();
-            //set data config
-            f.TopLevel = false;
-            //xóa trắng panel1
-            panel1.Controls.Clear();
-            //add form vào panel1
-            panel1.Controls.Add(f);
-            //resize form theo panel1
-            f.Width = panel1.Width;
-            f.Height = panel1.Height;
-            //show  form
-            f.Show();
-        }
-
-        private void sáchToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Frm_sach f = new Frm_sach();
-            //set data config
-            f.TopLevel = false;
-            //xóa trắng panel1
-            panel1.Controls.Clear();
-            //add form vào panel1
-            panel1.Controls.Add(f);
-            //resize form theo panel1
-            f.Width = panel1.Width;
-            f.Height = panel1.Height;
-            //show  form
-            f.Show();
-        }
-
         private void main_Load(object sender, EventArgs e)
         {
             if (dataservice.OpenConnection())
@@ -109,6 +77,54 @@ namespace librarian.view
                 m_Connection1.Close();
                 return false;
             }
+        }
+
+        private void danhSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_listdocgia f = new Frm_listdocgia();
+            f.Show();
+        }
+
+        private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_themdocgia f = new Frm_themdocgia();
+            f.Show();
+        }
+
+        private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_suadocgia f = new Frm_suadocgia();
+            f.Show();
+        }
+
+        private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_xoadocgia f = new Frm_xoadocgia();
+            f.Show();
+        }
+
+        private void danhSáchToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Frm_listsach f = new Frm_listsach();
+            f.Show();
+        }
+
+        private void thêmToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Frm_themsach f = new Frm_themsach();
+            f.Show();
+        }
+
+        private void sửaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Frm_suasachcs f = new Frm_suasachcs();
+            f.Show();
+        }
+
+        private void xóaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Frm_xoasach f = new Frm_xoasach();
+            f.Show();
         }
     }
 }

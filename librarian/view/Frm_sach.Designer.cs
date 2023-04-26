@@ -31,31 +31,31 @@ namespace librarian.view
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.btnall = new System.Windows.Forms.Button();
-            this.btntk = new System.Windows.Forms.Button();
-            this.txttk = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txttensach = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtmasach = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.txttentg = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnxoa = new System.Windows.Forms.Button();
             this.btnluu = new System.Windows.Forms.Button();
             this.btnedit = new System.Windows.Forms.Button();
             this.btnadd = new System.Windows.Forms.Button();
+            this.txttentg = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.txttensach = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtmasach = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.btnall = new System.Windows.Forms.Button();
+            this.btntk = new System.Windows.Forms.Button();
+            this.txttk = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dgvuser = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.creatorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -94,6 +94,113 @@ namespace librarian.view
             this.splitContainer1.Size = new System.Drawing.Size(1385, 638);
             this.splitContainer1.SplitterDistance = 461;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Location = new System.Drawing.Point(177, 481);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(182, 44);
+            this.btnHuy.TabIndex = 51;
+            this.btnHuy.Text = "HỦY THÊM";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Visible = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnxoa
+            // 
+            this.btnxoa.Location = new System.Drawing.Point(177, 481);
+            this.btnxoa.Name = "btnxoa";
+            this.btnxoa.Size = new System.Drawing.Size(75, 44);
+            this.btnxoa.TabIndex = 50;
+            this.btnxoa.Text = "XÓA";
+            this.btnxoa.UseVisualStyleBackColor = true;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
+            // 
+            // btnluu
+            // 
+            this.btnluu.Location = new System.Drawing.Point(68, 482);
+            this.btnluu.Name = "btnluu";
+            this.btnluu.Size = new System.Drawing.Size(75, 43);
+            this.btnluu.TabIndex = 49;
+            this.btnluu.Text = "LƯU";
+            this.btnluu.UseVisualStyleBackColor = true;
+            this.btnluu.Visible = false;
+            this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
+            // 
+            // btnedit
+            // 
+            this.btnedit.Location = new System.Drawing.Point(177, 415);
+            this.btnedit.Name = "btnedit";
+            this.btnedit.Size = new System.Drawing.Size(182, 45);
+            this.btnedit.TabIndex = 48;
+            this.btnedit.Text = "CẬP NHẬT";
+            this.btnedit.UseVisualStyleBackColor = true;
+            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
+            // 
+            // btnadd
+            // 
+            this.btnadd.Location = new System.Drawing.Point(68, 415);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(75, 45);
+            this.btnadd.TabIndex = 47;
+            this.btnadd.Text = "THÊM";
+            this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
+            // 
+            // txttentg
+            // 
+            // 
+            // 
+            // 
+            this.txttentg.Border.Class = "TextBoxBorder";
+            this.txttentg.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.txttentg.Location = new System.Drawing.Point(12, 283);
+            this.txttentg.Name = "txttentg";
+            this.txttentg.Size = new System.Drawing.Size(442, 44);
+            this.txttentg.TabIndex = 46;
+            // 
+            // labelX3
+            // 
+            this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.labelX3.Location = new System.Drawing.Point(12, 225);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(255, 52);
+            this.labelX3.TabIndex = 45;
+            this.labelX3.Text = "Tên tác giả";
+            // 
+            // txttensach
+            // 
+            // 
+            // 
+            // 
+            this.txttensach.Border.Class = "TextBoxBorder";
+            this.txttensach.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.txttensach.Location = new System.Drawing.Point(12, 175);
+            this.txttensach.Name = "txttensach";
+            this.txttensach.Size = new System.Drawing.Size(442, 44);
+            this.txttensach.TabIndex = 44;
+            // 
+            // txtmasach
+            // 
+            // 
+            // 
+            // 
+            this.txtmasach.Border.Class = "TextBoxBorder";
+            this.txtmasach.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.txtmasach.Location = new System.Drawing.Point(12, 67);
+            this.txtmasach.Name = "txtmasach";
+            this.txtmasach.ReadOnly = true;
+            this.txtmasach.Size = new System.Drawing.Size(442, 44);
+            this.txtmasach.TabIndex = 43;
+            // 
+            // labelX2
+            // 
+            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.labelX2.Location = new System.Drawing.Point(12, 117);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(255, 52);
+            this.labelX2.TabIndex = 42;
+            this.labelX2.Text = "Tên sách *";
             // 
             // splitContainer2
             // 
@@ -155,122 +262,6 @@ namespace librarian.view
             this.label1.TabIndex = 16;
             this.label1.Text = "Tìm kiếm";
             // 
-            // txttensach
-            // 
-            // 
-            // 
-            // 
-            this.txttensach.Border.Class = "TextBoxBorder";
-            this.txttensach.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txttensach.Location = new System.Drawing.Point(12, 175);
-            this.txttensach.Name = "txttensach";
-            this.txttensach.Size = new System.Drawing.Size(442, 44);
-            this.txttensach.TabIndex = 44;
-            // 
-            // txtmasach
-            // 
-            // 
-            // 
-            // 
-            this.txtmasach.Border.Class = "TextBoxBorder";
-            this.txtmasach.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txtmasach.Location = new System.Drawing.Point(12, 67);
-            this.txtmasach.Name = "txtmasach";
-            this.txtmasach.ReadOnly = true;
-            this.txtmasach.Size = new System.Drawing.Size(442, 44);
-            this.txtmasach.TabIndex = 43;
-            // 
-            // labelX2
-            // 
-            this.labelX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.labelX2.Location = new System.Drawing.Point(12, 117);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(255, 52);
-            this.labelX2.TabIndex = 42;
-            this.labelX2.Text = "Tên sách *";
-            // 
-            // labelX1
-            // 
-            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.labelX1.Location = new System.Drawing.Point(12, 12);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(199, 49);
-            this.labelX1.TabIndex = 41;
-            this.labelX1.Text = "Mã sách";
-            // 
-            // labelX3
-            // 
-            this.labelX3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.labelX3.Location = new System.Drawing.Point(12, 225);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(255, 52);
-            this.labelX3.TabIndex = 45;
-            this.labelX3.Text = "Tên tác giả";
-            // 
-            // txttentg
-            // 
-            // 
-            // 
-            // 
-            this.txttentg.Border.Class = "TextBoxBorder";
-            this.txttentg.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.txttentg.Location = new System.Drawing.Point(12, 283);
-            this.txttentg.Name = "txttentg";
-            this.txttentg.Size = new System.Drawing.Size(442, 44);
-            this.txttentg.TabIndex = 46;
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Location = new System.Drawing.Point(177, 481);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(182, 44);
-            this.btnHuy.TabIndex = 51;
-            this.btnHuy.Text = "HỦY THÊM";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Visible = false;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // btnxoa
-            // 
-            this.btnxoa.Location = new System.Drawing.Point(177, 481);
-            this.btnxoa.Name = "btnxoa";
-            this.btnxoa.Size = new System.Drawing.Size(75, 44);
-            this.btnxoa.TabIndex = 50;
-            this.btnxoa.Text = "XÓA";
-            this.btnxoa.UseVisualStyleBackColor = true;
-            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
-            // 
-            // btnluu
-            // 
-            this.btnluu.Location = new System.Drawing.Point(68, 482);
-            this.btnluu.Name = "btnluu";
-            this.btnluu.Size = new System.Drawing.Size(75, 43);
-            this.btnluu.TabIndex = 49;
-            this.btnluu.Text = "LƯU";
-            this.btnluu.UseVisualStyleBackColor = true;
-            this.btnluu.Visible = false;
-            this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
-            // 
-            // btnedit
-            // 
-            this.btnedit.Location = new System.Drawing.Point(177, 415);
-            this.btnedit.Name = "btnedit";
-            this.btnedit.Size = new System.Drawing.Size(182, 45);
-            this.btnedit.TabIndex = 48;
-            this.btnedit.Text = "CẬP NHẬT";
-            this.btnedit.UseVisualStyleBackColor = true;
-            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
-            // 
-            // btnadd
-            // 
-            this.btnadd.Location = new System.Drawing.Point(68, 415);
-            this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(75, 45);
-            this.btnadd.TabIndex = 47;
-            this.btnadd.Text = "THÊM";
-            this.btnadd.UseVisualStyleBackColor = true;
-            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
-            // 
             // dgvuser
             // 
             this.dgvuser.AllowUserToAddRows = false;
@@ -304,6 +295,38 @@ namespace librarian.view
             this.dgvuser.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvuser_RowHeaderMouseClick);
             this.dgvuser.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvuser_RowPostPaint);
             // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.MinimumWidth = 8;
+            this.STT.Name = "STT";
+            this.STT.Width = 150;
+            // 
+            // bookId
+            // 
+            this.bookId.DataPropertyName = "bookId";
+            this.bookId.HeaderText = "Mã sách";
+            this.bookId.MinimumWidth = 8;
+            this.bookId.Name = "bookId";
+            this.bookId.ReadOnly = true;
+            this.bookId.Width = 150;
+            // 
+            // bookName
+            // 
+            this.bookName.DataPropertyName = "bookName";
+            this.bookName.HeaderText = "Tên sách *";
+            this.bookName.MinimumWidth = 8;
+            this.bookName.Name = "bookName";
+            this.bookName.Width = 150;
+            // 
+            // creatorName
+            // 
+            this.creatorName.DataPropertyName = "creatorName";
+            this.creatorName.HeaderText = "Tên tác giả";
+            this.creatorName.MinimumWidth = 8;
+            this.creatorName.Name = "creatorName";
+            this.creatorName.Width = 150;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "STT";
@@ -336,37 +359,14 @@ namespace librarian.view
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Width = 150;
             // 
-            // STT
+            // labelX1
             // 
-            this.STT.HeaderText = "STT";
-            this.STT.MinimumWidth = 8;
-            this.STT.Name = "STT";
-            this.STT.Width = 150;
-            // 
-            // bookId
-            // 
-            this.bookId.DataPropertyName = "bookId";
-            this.bookId.HeaderText = "Mã sách";
-            this.bookId.MinimumWidth = 8;
-            this.bookId.Name = "bookId";
-            this.bookId.ReadOnly = true;
-            this.bookId.Width = 150;
-            // 
-            // bookName
-            // 
-            this.bookName.DataPropertyName = "bookName";
-            this.bookName.HeaderText = "Tên sách *";
-            this.bookName.MinimumWidth = 8;
-            this.bookName.Name = "bookName";
-            this.bookName.Width = 150;
-            // 
-            // creatorName
-            // 
-            this.creatorName.DataPropertyName = "creatorName";
-            this.creatorName.HeaderText = "Tên tác giả";
-            this.creatorName.MinimumWidth = 8;
-            this.creatorName.Name = "creatorName";
-            this.creatorName.Width = 150;
+            this.labelX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.labelX1.Location = new System.Drawing.Point(12, 12);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(199, 49);
+            this.labelX1.TabIndex = 41;
+            this.labelX1.Text = "Mã sách";
             // 
             // Frm_sach
             // 
@@ -406,7 +406,6 @@ namespace librarian.view
         private DevComponents.DotNetBar.Controls.TextBoxX txttensach;
         private DevComponents.DotNetBar.Controls.TextBoxX txtmasach;
         private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.LabelX labelX1;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnxoa;
         private System.Windows.Forms.Button btnluu;
@@ -421,5 +420,6 @@ namespace librarian.view
         private System.Windows.Forms.DataGridViewTextBoxColumn bookId;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookName;
         private System.Windows.Forms.DataGridViewTextBoxColumn creatorName;
+        private DevComponents.DotNetBar.LabelX labelX1;
     }
 }
